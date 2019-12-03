@@ -1,5 +1,8 @@
 function [nod, ele, gen] = get_dof(nod, ele, gen)
-    % Set general dof numbers, dof per node and per element (incidences)
+    %--------------------------------------------------------------------------------
+    % Assign general dof numbers, dof per node and per element (incidences)
+    %
+    %   [nod, ele, gen] = get_dof(nod, ele, gen)
     %
     % Input:
     %   - nod: nodes information
@@ -13,11 +16,11 @@ function [nod, ele, gen] = get_dof(nod, ele, gen)
     %       - gen.ndofn: numer of dof per node
     %
     % Output:
-    %   - nod.dofn: cell with a list of assigned dof per nodes
+    %   - nod.dofn: cell with a list of assigned dof per node
+    %   - ele.incid: element incidences
     %   - gen.dofa: list of dofs with prescribed displacements
     %   - gen.dofb: list of free dofs
-    %   - ele.incid: element incidences
-    %
+    %--------------------------------------------------------------------------------
 
 
     % Set dof per node (prescribed first)

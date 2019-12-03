@@ -1,5 +1,18 @@
 function [k] = get_ke(type, mat, sec, xyz)
-    % Function to compute element k matrix
+    %--------------------------------------------------------------------------------
+    % Compute stiffness matrix of one element
+    %
+    %   [k] = get_ke(type, mat, sec, xyz)
+    %
+    % Input:
+    %   - type: (string) type of element
+    %   - mat: material properties
+    %   - sec: cross section properties
+    %   - xyz: node coordinates
+    %
+    % Output:
+    %   - k: stiffness matrix of the element
+    %--------------------------------------------------------------------------------
 
     if size(mat, 2) == 1
         mat(2) = mat(1) / (2*(1+0.3)); % nu = 0.3 asumed

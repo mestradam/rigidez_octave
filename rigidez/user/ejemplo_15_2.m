@@ -3,6 +3,11 @@
 % Ejemplo 15-2 (Hibbeler - Análisis estructural)
 % -------------------------------------------------------------------
 
+% Limpiar pantalla, línea de comandos, variables, etc.
+clear; clc;
+
+% Cargar librería
+addpath ("../src")
 
 % -------------------------------------------------------------------
 % Definir el modelo estructural (pre-proceso)
@@ -59,3 +64,10 @@ ele.conec = {
 nod.nload = {
     [ 2 1 5 ];
 };
+
+
+% Solucionar el problema lineal elástico
+solve;
+
+% Mostrar resultados en consola
+show_results;

@@ -1,5 +1,8 @@
 function [fnb] = get_nload(nod, gen)
-    % Function to arrange (assemble) the vector of nodal external loads
+    %--------------------------------------------------------------------------------
+    % Assemble the vector of nodal external loads
+    %
+    %   [fnb] = get_nload(nod, gen)
     %
     % Input:
     %   - nod: structure with the nodal information (nod.xyz, nod.restr, etc.)
@@ -7,7 +10,7 @@ function [fnb] = get_nload(nod, gen)
     %
     % Output:
     %   - fnb: subvector of nodal loads at free dofs
-    %
+    %--------------------------------------------------------------------------------
 
     fn = zeros(gen.ndof, 1);
 
@@ -20,7 +23,6 @@ function [fnb] = get_nload(nod, gen)
 
     end
 
-    % fna = fn( gen.dofa ); % To be calculated later (reactions)
     fnb = fn( gen.dofb );
 
 end

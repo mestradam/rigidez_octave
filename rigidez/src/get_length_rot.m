@@ -1,5 +1,16 @@
 function [L, r] = get_length_rot(xyz)
+    %--------------------------------------------------------------------------------
     % Compute elements length and rotation matrix (dir)
+    %
+    %   [L, r] = get_length_rot(xyz)
+    %
+    % Input:
+    %   - xyz: nodes coordinates (ni, nj)
+    %
+    % Output:
+    %   - L: length of the element
+    %   - r: rotation matrix (director cosines matrix)
+    %--------------------------------------------------------------------------------
 
     dims = size(xyz, 2);
 
